@@ -23,7 +23,7 @@ with open('devices.txt') as f:
   devicesList = f.read().splitlines()
 
 # create a directory for saving routing tables as CSV files
-path = (r".\\LAB3\\RoutingTables")
+path = (r".\\RoutingTables")
 try:
   print ("\n Creating directory 'LAB3\RoutingTables for storing config files.")
   os.mkdir(path)
@@ -82,7 +82,7 @@ try:
     print ("\t >>> Saving Routing table for " + deviceHostname + "... \n")
     keys = routingTable[0].keys()
     CSVFileName = deviceHostname + "_route-table.csv"
-    a_file = open(r".\\LAB3\\RoutingTables\\" + CSVFileName , 'w')
+    a_file = open(r".\\RoutingTables\\" + CSVFileName , 'w')
     dict_writer = csv.DictWriter(a_file, keys)
     dict_writer.writeheader()
     dict_writer.writerows(routingTable)
@@ -111,7 +111,7 @@ saveRoutes =  ("\n Day and time: " + currentTime +
         "\n >> Routing tables have been saved for " + str(successDevices))
 
 #save the logs in a file
-save_Result =  open(r".\\LAB3\\Logs\\" + deviceHostname + "_route-table.txt", "w")
+save_Result =  open(r".\\Logs\\" + deviceHostname + "_route-table.txt", "w")
 save_Result.write (saveRoutes)
 save_Result.write("\n")
 save_Result.close
