@@ -1,9 +1,7 @@
-#Author: Jaie-Ross-Mandeep-Yasin
-
+#Author: truezeros
 '''
 ---------
-NETW3100 - LAB 3 -
-This application will configure EIGRP on devices.
+This application will configure EIGRP on devices listed in devices.txt.
 11/26/2021
 ----------
 '''
