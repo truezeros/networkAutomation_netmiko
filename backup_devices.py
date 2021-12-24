@@ -44,11 +44,11 @@ sshUsername = input('Enter your SSH username: ')
 sshPassword = getpass.getpass(prompt="Enter your SSH password: ")
 enablePassword = getpass.getpass(prompt="Enter your privileged-exec mode password: ")
 
-#define a list to aggreagate devices for each sucessfully backed up devices and the devices that failed
+# define a list to aggreagate devices for each sucessfully backed up devices and the devices that failed
 failedDevices = []
 successDevices = []
 
-#start a loop to iterate each live host on the network
+# start a loop to iterate each live host on the network
 for deviceIp in devicesList:
 
     print ("\n ---------------------------- Attempting SSH connection to " + deviceIp +". ---------------------------- \n")
@@ -124,11 +124,11 @@ for deviceIp in devicesList:
     else:
         failedDevicesResult = failedDevices
 
-#remove brackets when printing devices
+# remove brackets when printing devices
 failedDevices = (', '.join(failedDevices))
 successDevices = (', '.join(successDevices))
 
-#log the results each time the program is run
+# log the results each time the program is run
 backupResult =  ("\n Day and time: " + currentTime +
         "\n Backup process has been completed: " + 
         "\n >> Device configurations have been backed up for " + str(successDevices) +
