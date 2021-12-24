@@ -1,2 +1,2 @@
 # networkAutomation
-Network automation using Python libraries and Ansible
+Network automation using Python Netmiko module.
